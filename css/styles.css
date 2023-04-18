@@ -1,0 +1,403 @@
+/* GLOBAL */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Hind, sans-serif;
+    background-color: #fff;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.heading {
+    max-width: 750px;
+}
+
+.heading h2 {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #1a1d2d;
+}
+
+.heading p {
+    color: #585858;
+    line-height: 24px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .navbar-brand {
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar-brand i {
+    color: #35a22c;
+    font-size: 45px;
+    margin-right: 8px;
+}
+
+header .navbar-toggler {
+    background-color: #35a22c;
+    padding: 0.25rem 0.75rem;
+}
+
+header .navbar-toggler:hover {
+    background-color: #247c1c;
+}
+
+
+header .navbar-toggler:focus {
+    box-shadow: none;
+    background-color: #247c1c;
+}
+
+header .navbar-toggler i {
+    font-size: 24px;
+}
+
+#navbarPort .nav-item {
+    margin: 0 10px;
+}
+
+header nav .nav-link.active {
+    color: #35a22c !important;
+}
+
+header nav .nav-item {
+    position: relative;
+}
+
+header nav .nav-item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+
+header nav .nav-item:first-child::after{
+    width: 100%;
+}
+
+header nav .nav-item:hover::after{
+    width: 100%;
+}
+
+header nav .nav-item .nav-link:hover {
+    color: #35a22c !important;
+}
+
+
+/* CAROUSEL */
+.carousel-indicators{
+    bottom: 10%;
+}
+
+.cyberCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+}
+
+.cyberCarousel .carousel-indicators button:hover,
+.cyberCarousel .carousel-indicators button.active {
+    background-color: #35a22c;
+}
+
+.cyberCarousel .carousel-item:first-child {
+    background-image: url(./../img/finland.jpg);
+}
+
+.cyberCarousel .carousel-item:nth-child(2){
+    background-image: url(./../img/mountains.jpg);
+}
+.cyberCarousel .carousel-item:last-child{
+    background-image: url(./../img/mountains-1.jpg);
+}
+
+.cyberCarousel .carousel-item {
+    height: 100vh;
+}
+
+.cyberCarousel .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39,43,54,.5);
+}
+
+.cyberCarousel .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cyberCarousel .carousel-caption img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.cyberCarousel .carousel-caption h5 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.cyberCarousel .carousel-caption p {
+    font-size: 1.5rem;
+}
+
+/* PROJECTS */
+.projects .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #35a22c;
+    color: white;
+    border-color: #35a22c;
+}
+
+.projects .nav-pills .nav-link {
+    color: #1a1d2d;
+    border: 1px solid #1a1d2d;
+    margin: 0 5px;
+}
+
+.projects__item {
+    margin-top: 36px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.4rem rgba(0,0,0,.13);
+    border: none;
+    cursor: pointer;
+}
+
+.projects__item .card-body {
+    border: 1px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+    transition: all .5s;
+}
+
+.projects__item:hover .card-body {
+    border-color: #35a22c;
+    border-top-color: transparent;
+}
+
+.projects__item h5 {
+    font-weight: 400;
+    transition: all .5s;
+}
+
+.projects__item:hover h5 {
+    color: #35a22c;
+}
+
+.projects__item p {
+    color: #585858;
+}
+
+/* ABOUT */
+
+.about {
+    background-image: url(./../img/3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 100px 0 120px;
+}
+
+.about .overlay {
+    background-color: rgba(7, 10, 12, 0.72);
+}
+
+.about .heading {
+    position: relative;
+}
+
+.about__content {
+    position: relative;
+}
+
+.about .about__item {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    transition: all .5s;
+}
+
+.about__item i {
+    font-size: 3rem;
+    color: #35a22c;
+}
+
+.about__item h5 {
+    color: #fff;
+    margin: 25px 0 8px;
+}
+
+.about__item p {
+    padding-top: 15px;
+    color: #fff;
+    line-height: 24px;
+}
+
+.about__item:hover {
+    background-color: #000;
+    border-color: #fff;
+}
+
+/* AWARD */
+.award {
+    padding: 70px 0;
+    color: #585858;
+    position: relative;
+}
+
+.award__bg {
+    background-image: url(./../img/memphis_3.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.award .container {
+    position: relative;
+}
+
+.award__left {
+    padding: 45px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+}
+
+.footer__main a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid #454545 ;
+    border-radius: 50%;
+    color: #aaa;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+
+.footer__main a:hover{
+    color: #35a22c;
+    border-color: #35a22c;
+}
+
+.footer__copyright p{
+    color: #aaa;
+    padding-top: 30px;
+    margin: 30px 0 0;
+    border-top: 1px solid #454545;
+}
+
+
+/******************** RESPONSIVE ********************/
+
+@media screen and (max-width:991.98px) {
+
+    /* HEADER */
+    header .navbar-collapse {
+        background-color: white;
+    }
+
+    header #navbarPort .nav-item {
+        margin: 0;
+        padding: 0 10px;
+    }  
+
+    header #navbarPort .nav-item:hover,
+    header #navbarPort .nav-item.active {
+        background-color: #35a22c;
+    }
+    
+    header nav .nav-item:first-child::after,
+    header nav .nav-item:hover::after {
+        width: 0;
+    }
+
+    header #navbarPort .nav-item .nav-link {
+        color: #35a22c !important;
+        transition: all .5s;
+    }
+
+    header #navbarPort .nav-item:hover .nav-link {
+        color: #fff !important;
+    }
+
+    @media screen and (max-width:767.98px) {
+        .award__bg {
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width:575.98px) {
+        .projects .nav-pills .nav-link {
+            padding: .5rem;
+        }
+    }
+
+    @media screen and (max-width:415px){
+        .projects .nav-pills .nav-item:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    } 
+
+    @media screen and (max-width:376px) {
+        header .navbar-brand {
+            font-size: 7vw;
+        }
+        header .navbar-brand i {
+            font-size: 10vw;
+        }
+    }
+}
