@@ -172,6 +172,7 @@ header nav .nav-item .nav-link:hover {
 .cyberCarousel .carousel-caption h5 {
     font-size: 3.5rem;
     line-height: 1.2;
+    margin-top: 16px;
 }
 
 .cyberCarousel .carousel-caption p {
@@ -390,14 +391,38 @@ footer {
         .projects .nav-pills .nav-item:not(:last-child) {
             margin-bottom: 12px;
         }
-    } 
-
-    @media screen and (max-width:376px) {
         header .navbar-brand {
             font-size: 7vw;
         }
         header .navbar-brand i {
             font-size: 10vw;
         }
+
+        header .navbar-toggler i {
+            font-size: 20px;
+        }
+    }
+    } 
+
+    @media screen and (max-width:376px) {
+        
+}
+
+@media screen and (max-width:767.98px) {
+    .cyberCarousel .carousel-caption h5 {
+        font-size: 3rem;
+    }
+
+    .cyberCarousel .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .cyberCarousel .carousel-caption h5 {
+        font-size: 2.2rem;
+    }
+    .cyberCarousel .carousel-caption p {
+        font-size: 1rem;
     }
 }
